@@ -10,12 +10,11 @@ const scrapeFlipkart = () => {
 };
 
 const getPrice = () => {
-  if (window.location.href.includes('amazon.com')) {
+  if (window.location.href.includes('amazon.in')) {
     return scrapeAmazon();
   } else if (window.location.href.includes('flipkart.com')) {
     return scrapeFlipkart();
   }
-  // Add more platforms as needed
   return null;
 };
 

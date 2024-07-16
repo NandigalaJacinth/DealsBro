@@ -19,10 +19,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       // Notify the user
       chrome.notifications.create({
         type: 'basic',
-        iconUrl: 'icon.png',
+        iconUrl: 'icons/icon128.png',
         title: 'Lowest Price Alert!',
         message: `The price for the item at ${url} is at its lowest: $${price}`
       });
     }
+  } else if (message.type === 'GET_PRICE_HISTORY') {
+    chrome.storage.local.get('priceHistory', (data) => {
+      sendResponse(data.priceHistory || {});
+    });
+    return true;
   }
 });
