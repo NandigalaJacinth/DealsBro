@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  #price-history {
+    margin-bottom: 20px;
+  }
+  .price-item {
+    margin-bottom: 10px;
+  }

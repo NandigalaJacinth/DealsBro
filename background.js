@@ -1,3 +1,4 @@
+// Background script for handling price data and notifications
 let priceHistory = {};
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
